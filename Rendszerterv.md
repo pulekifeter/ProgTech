@@ -62,12 +62,12 @@ folyamatos kapcsolatot kell biztosítani a kiszolgáló szerverhez.
 - java 18 SDK
 - IntelliJ IDEA 
 - XAMP
-  - MYSQL
+  - MYSQL/MariaDB
 - GitHub
 
 ## 7. Architektúrális terv
 - IntelliJ fejleseztői környezetein belül, Java 18-as keretrendszerét használva.
-- Az adatokat MYSQL adatbázisban tároljuk.
+- Az adatokat MariaDB adatbázisban tároljuk.
 - Az adatok lekérdezését, módosítását, feltöltésést az előbb említett lekérdezőnyelv parancsait integrálva valósítottuk meg.
 
 ## 8. Adatbázis terv
