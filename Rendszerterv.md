@@ -52,5 +52,27 @@ Lehetőség szerint közös munkavégzés, melynek elemei:
 Az alkalmazást indítva felhasználónév és jelszó párossal lehet a "Funkcionális követelmények"-nél olvasható funkciókat elérni, melynek stabil működéséhez
 folyamatos kapcsolatot kell biztosítani a kiszolgáló szerverhez.
 
+## 6. Fizikai környezet
+
+### Java ablakos alkalmazás
+
+### Adatbázis szerver
+
+### Fejlesztői eszközök:
+-java 18 SDK
+-IntelliJ IDEA 
+-XAMP
+  -MYSQL
+-GitHub
+
+## 7. Architektúrális terv
+- IntelliJ fejleseztői környezetein belül, Java 18-as keretrendszerét használva.
+- Az adatokat MYSQL adatbázisban tároljuk.
+- Az adatok lekérdezését, módosítását, feltöltésést az előbb említett lekérdezőnyelv parancsait integrálva valósítottuk meg.
+
+## 8. Adatbázis terv
+
+
+
 
 
