@@ -28,4 +28,29 @@ Lehetőség szerint közös munkavégzés, melynek elemei:
 - Help Desk
 
 ## 4. Követelmények
+### Funkcionális követelmények
+- Katalógus 
+  - Könyv hozzáadása
+    -Könyv kiadó hozzáadása
+  - Könyv módosítása
+  - Könyv keresése
+  - Könyv törlése
+- Tagok kezelése
+  -Tag létrehozása
+  -Tag keresése
+- Leltár kezelése
+  - Könyv hozzáadása a leltárhoz
+  - Leltáron lévő könyv módosítása
+  - Leltáron lévő könyv törlése
+  - Leltáron lévő könyv keresése
+- Könyv kölcsönzése
+
+### Jogi követelmények
+- Minden jog fenntartva.
+
+## 5. Funkcionális terv
+Az alkalmazást indítva felhasználónév és jelszó párossal lehet a "Funkcionális követelmények"-nél olvasható funkciókat elérni, melynek stabil működéséhez
+folyamatos kapcsolatot kell biztosítani a kiszolgáló szerverhez.
+
+
 
