@@ -66,7 +66,7 @@ folyamatos kapcsolatot kell biztosítani a kiszolgáló szerverhez.
 - GitHub
 
 ## 7. Architektúrális terv
-- IntelliJ fejleseztői környezetein belül, Java 18-as keretrendszerét használva.
+- IntelliJ fejlesztői környezetein belül, Java 18-as keretrendszerét használva.
 - Az adatokat MariaDB adatbázisban tároljuk.
 - Az adatok lekérdezését, módosítását, feltöltésést az előbb említett lekérdezőnyelv parancsait integrálva valósítottuk meg.
 
