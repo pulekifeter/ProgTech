@@ -71,7 +71,51 @@ folyamatos kapcsolatot kell biztosítani a kiszolgáló szerverhez.
 - Az adatok lekérdezését, módosítását, feltöltésést az előbb említett lekérdezőnyelv parancsait integrálva valósítottuk meg.
 
 ## 8. Adatbázis terv
+- Kiadok
+  - KiadoID
+  - Kiadonev
+- KolcsonzottKonyvek
+  - KolcsonzesID (KEY)
+  - Leltariszam (FK)(Leltar.Leltarszam)
+  - TagID (FK)(Tagok.TagID)
+  - KolcsonzesDatum
+  - Visszahozva
+- Konyvek
+  - KonyvID (KEY)
+  - Cim
+  - KioadoID (FK)(Kiadok.KiadoID)
+  - Besorolas
+  - Iro
+  - Nyelv
+  - Ar
+- Leltar
+  - KonyvID (FK)(Konyvek.KonyvID)
+  - Leltariszam (KEY)
+  - Hely
+  - Kiadva
+- Tagok
+  - TagID (KEY)
+  - Nev
+  - SzulDatum
+  - Lakhely
+  - SzemelyID
 
+## 9. Implementációs terv
+###Tervezési minták helye
+
+## 10. Teszt terv
+- Unit teszt
+- Felhasználói élmény teszt
+
+## 11. Telepítési terv
+-Help Desk által távoli asztal kapcsolatot létrehozva
+-Adminisztárot által személyesen
+
+## 12. Karbantartási teszt
+Az alkalmazás zárt alfa és béta állapotban lesznek elérhetőek. 
+Zárt alfa állapotban a felhasználói élmény tapasztalatai alapján módosítjuk az alkalmazást.
+Zárt béta fázisban a felhasználók jelentései alapján javítjuk a hibákat, közösen új funkciókat fogalmazunk meg. 
+Zárt állapotokban manuális segítséget nyújtunk a frissítéshez Help Desk/Adminisztrátor csapattal, 1.0 fázisban már automatikus frissítésre is lesz lehetőség.
 
 
 
