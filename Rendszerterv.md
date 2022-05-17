@@ -59,11 +59,11 @@ folyamatos kapcsolatot kell biztosítani a kiszolgáló szerverhez.
 ### Adatbázis szerver
 
 ### Fejlesztői eszközök:
--java 18 SDK
--IntelliJ IDEA 
--XAMP
-  -MYSQL
--GitHub
+- java 18 SDK
+- IntelliJ IDEA 
+- XAMP
+  - MYSQL
+- GitHub
 
 ## 7. Architektúrális terv
 - IntelliJ fejleseztői környezetein belül, Java 18-as keretrendszerét használva.
@@ -108,8 +108,8 @@ folyamatos kapcsolatot kell biztosítani a kiszolgáló szerverhez.
 - Felhasználói élmény teszt
 
 ## 11. Telepítési terv
--Help Desk által távoli asztal kapcsolatot létrehozva
--Adminisztárot által személyesen
+- Help Desk által távoli asztal kapcsolatot létrehozva
+- Adminisztárot által személyesen
 
 ## 12. Karbantartási teszt
 Az alkalmazás zárt alfa és béta állapotban lesznek elérhetőek. 
