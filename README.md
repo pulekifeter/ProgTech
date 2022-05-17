@@ -1,4 +1,4 @@
-#Könyvtári könyv nyilvántartó alkalmazás
+# Könyvtári könyv nyilvántartó alkalmazás
 
 Az alkalmazás lehetőséget biztosít egy könyvtárlánc könyv és olvasó nyilvántartásának kezelésére.
 Egy könyvtárlánci olvasójeggyel az olvasó képes a könyvtárlánc bármelyik intézményéből könyvet kölcsönözni.
