@@ -10,14 +10,6 @@ public class FoOldal {
     private JButton button3;
     private JButton button4;
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame(("FoOldal"));
-        frame.setContentPane(new FoOldal().mainPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-    }
-
 
 
 }
