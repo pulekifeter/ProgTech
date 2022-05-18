@@ -1,6 +1,6 @@
 package com.loginpage;
 
-import com.fooldal.FoOldal;
+
 import com.osztalyok.Login_certs;
 import javax.swing.*;
 import java.awt.*;
@@ -15,6 +15,7 @@ public class LoginPage extends Component {
     private JPasswordField tf_password;
     private JButton OKButton;
     private static Boolean b_fooldal = false;
+    private Container mainPanel;
 
     public LoginPage() {
         OKButton.addActionListener(new ActionListener() {
@@ -27,7 +28,7 @@ public class LoginPage extends Component {
 
                 try{
                     JFrame foOldal = new JFrame(("FoOldal"));
-                    foOldal.setContentPane(new FoOldal().mainPanel);
+                    foOldal.setContentPane(new LoginPage().mainPanel);
                     foOldal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     foOldal.pack();
                     foOldal.setVisible(true);
