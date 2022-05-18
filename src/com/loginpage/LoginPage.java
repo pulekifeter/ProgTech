@@ -1,5 +1,6 @@
 package com.loginpage;
 
+import com.fooldal.FoOldal;
 import com.osztalyok.Login_certs;
 import javax.swing.*;
 import java.awt.*;
@@ -13,14 +14,28 @@ public class LoginPage extends Component {
     private JTextField tf_username;
     private JPasswordField tf_password;
     private JButton OKButton;
+    private static Boolean b_fooldal = false;
 
     public LoginPage() {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-            login_certs = getAuthenticated(tf_username.getText(),String.valueOf(tf_password.getPassword()));
+            login_certs = Login_certs.getAuthenticated(tf_username.getText(),String.valueOf(tf_password.getPassword()));
             if(login_certs!=null){
+                    //TODO: átírányítás a főoldalra.
+
+                try{
+                    JFrame foOldal = new JFrame(("FoOldal"));
+                    foOldal.setContentPane(new FoOldal().mainPanel);
+                    foOldal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    foOldal.pack();
+                    foOldal.setVisible(true);
+                    b_fooldal = true;
+
+                }
+                catch (Exception exception){}
+
 
             }
             else{
@@ -35,37 +50,7 @@ public class LoginPage extends Component {
     }
 
     private Login_certs login_certs;
-    private Login_certs getAuthenticated(String username, String password){
-        Login_certs user = null;
-        final String DB_URL = "jdbc:mysql://localhost/konyvtar_db?";
-        final String USERNAME = "root";
-        final String PASSWORD ="";
 
-        try{
-            Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-            Statement stmt = conn.createStatement();
-            String sql = "SELECT * FROM login_certs WHERE username=? AND password=?";
-            PreparedStatement preparedStatement = conn.prepareStatement(sql);
-            preparedStatement.setString(1, username);
-            preparedStatement.setString(2, password);
-
-            ResultSet resultSet = preparedStatement.executeQuery();
-
-            if (resultSet.next()) {
-                user = new Login_certs();
-                user.setUsername(resultSet.getString("username"));
-                user.setPassword(resultSet.getString("password"));
-
-            }
-
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-
-        return user;
-
-
-    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame(("LoginPage"));
@@ -73,6 +58,7 @@ public class LoginPage extends Component {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+
 
 
     }
