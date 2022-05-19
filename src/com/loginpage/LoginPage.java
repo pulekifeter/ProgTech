@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.sql.*;
 
 import static com.fooldal.FoOldal.createAndShowGUI;
+import static com.loginpage.LoginPage.Keret.frame;
 
 
 public class LoginPage extends Component {
@@ -18,6 +19,8 @@ public class LoginPage extends Component {
     private JButton OKButton;
 
     public LoginPage() {
+
+        frame.getRootPane().setDefaultButton(OKButton);
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -25,7 +28,7 @@ public class LoginPage extends Component {
             login_certs = Login_certs.getAuthenticated(tf_username.getText(),String.valueOf(tf_password.getPassword()));
             if(login_certs!=null){
                 try{
-                    javax.swing.SwingUtilities.invokeLater(new Runnable() {
+                    SwingUtilities.invokeLater(new Runnable() {
                         public void run() {
 
                             createAndShowGUI();
@@ -54,10 +57,10 @@ public class LoginPage extends Component {
     }
     public static void main(String[] args) {
 
-        Keret.frame.setContentPane(new LoginPage().panel1);
-        Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Keret.frame.pack();
-        Keret.frame.setVisible(true);
+        frame.setContentPane(new LoginPage().panel1);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
 
 
 
