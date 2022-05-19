@@ -1,7 +1,17 @@
 package com.fooldal;
 
+import com.kolcsonzes.Kolcsonzes;
+import com.konyvallomany.KonyvKereses;
+import com.konyvallomany.KonyvModositas;
+import com.konyvallomany.KonyvTorles;
 import com.konyvallomany.UjKonyv;
+import com.leltar.LeltarHozzaad;
+import com.leltar.LeltarKereses;
+import com.leltar.LeltarModositas;
+import com.leltar.LeltarTorles;
 import com.loginpage.LoginPage;
+import com.tagokkezelese.TagHozzaadas;
+import com.tagokkezelese.TagKereses;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -37,8 +47,6 @@ public class FoOldal {
         menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //JFrame frame = new JFrame(("UjKonyv"));
-
                 FoOldal.Container1.frame.setContentPane(new UjKonyv().ujKonyvPanel);
                 FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 FoOldal.Container1.frame.pack();
@@ -54,6 +62,15 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoOldal.Container1.frame.setContentPane(new KonyvModositas().konyvModositasPanel);
+                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                FoOldal.Container1.frame.pack();
+                FoOldal.Container1.frame.setVisible(true);
+            }
+        });
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Könyv keresése",
@@ -62,7 +79,16 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-//        menu.addActionListener();
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoOldal.Container1.frame.setContentPane(new KonyvKereses().konyvKeresesPanel);
+                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                FoOldal.Container1.frame.pack();
+                FoOldal.Container1.frame.setVisible(true);
+            }
+        });
+
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Könyv törlése",
@@ -71,7 +97,15 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
- //       menu.addActionListener();
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoOldal.Container1.frame.setContentPane(new KonyvTorles().konyvTorlesPanel);
+                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                FoOldal.Container1.frame.pack();
+                FoOldal.Container1.frame.setVisible(true);
+            }
+        });
         menu.add(menuItem);
 
 
@@ -87,7 +121,15 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-//        menu.addActionListener();
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoOldal.Container1.frame.setContentPane(new TagHozzaadas().tagHozzadasPanel);
+                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                FoOldal.Container1.frame.pack();
+                FoOldal.Container1.frame.setVisible(true);
+            }
+        });
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Tag keresése",
@@ -96,7 +138,15 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
- //       menu.addActionListener();
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoOldal.Container1.frame.setContentPane(new TagKereses().tagKeresesePanel);
+                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                FoOldal.Container1.frame.pack();
+                FoOldal.Container1.frame.setVisible(true);
+            }
+        });
         menu.add(menuItem);
 
         menu = new JMenu("Leltár kezelése");
@@ -110,7 +160,15 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-//        menu.addActionListener();
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoOldal.Container1.frame.setContentPane(new LeltarHozzaad().leltarHozzaadPanel);
+                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                FoOldal.Container1.frame.pack();
+                FoOldal.Container1.frame.setVisible(true);
+            }
+        });
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Leltáron lévő könyv módosítása",
@@ -119,7 +177,15 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-//        menu.addActionListener();
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoOldal.Container1.frame.setContentPane(new LeltarModositas().leltarModositasPanel);
+                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                FoOldal.Container1.frame.pack();
+                FoOldal.Container1.frame.setVisible(true);
+            }
+        });
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Leltáron lévő könyv törlése",
@@ -128,7 +194,15 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-//        menu.addActionListener();
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoOldal.Container1.frame.setContentPane(new LeltarTorles().leltarTorlesPanel);
+                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                FoOldal.Container1.frame.pack();
+                FoOldal.Container1.frame.setVisible(true);
+            }
+        });
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Leltáron lévő könyv keresése",
@@ -137,14 +211,28 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-//        menu.addActionListener();
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoOldal.Container1.frame.setContentPane(new LeltarKereses().leltarKeresesPanel);
+                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                FoOldal.Container1.frame.pack();
+                FoOldal.Container1.frame.setVisible(true);
+            }
+        });
         menu.add(menuItem);
 
         menu = new JMenu("Könyv kölcsönzése");
         menu.setMnemonic(KeyEvent.VK_N);
-        menu.getAccessibleContext().setAccessibleDescription(
-                "This menu does nothing");
-//        menu.addActionListener();
+        menu.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoOldal.Container1.frame.setContentPane(new Kolcsonzes().kolcsonzesPanel);
+                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                FoOldal.Container1.frame.pack();
+                FoOldal.Container1.frame.setVisible(true);
+            }
+        });
         menuBar.add(menu);
 
         return menuBar;

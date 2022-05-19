@@ -3,7 +3,7 @@ package com.leltar;
 import javax.swing.*;
 
 public class LeltarModositas {
-    private JPanel panel1;
+    public JPanel leltarModositasPanel;
     private JTable table1;
     private JButton módosításButton;
     private JButton mégsemButton;

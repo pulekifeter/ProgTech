@@ -3,7 +3,7 @@ package com.konyvallomany;
 import javax.swing.*;
 
 public class KonyvKereses {
-    private JPanel panel1;
+    public JPanel konyvKeresesPanel;
     private JTextField textField1;
     private JTable table1;
 }

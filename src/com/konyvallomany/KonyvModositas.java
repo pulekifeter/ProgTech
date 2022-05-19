@@ -3,7 +3,7 @@ package com.konyvallomany;
 import javax.swing.*;
 
 public class KonyvModositas {
-    private JPanel panel1;
+    public JPanel konyvModositasPanel;
     private JTable table1;
     private JButton szerkesztésButton;
     private JButton mégsemButton;

@@ -3,7 +3,7 @@ package com.leltar;
 import javax.swing.*;
 
 public class LeltarKereses {
-    private JPanel panel1;
+    public JPanel leltarKeresesPanel;
     private JTextField textField1;
     private JButton button1;
     private JComboBox comboBox1;
