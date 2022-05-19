@@ -16,8 +16,6 @@ public class LoginPage extends Component {
     private JTextField tf_username;
     private JPasswordField tf_password;
     private JButton OKButton;
-    private static Boolean b_fooldal = false;
-    private Container mainPanel;
 
     public LoginPage() {
         OKButton.addActionListener(new ActionListener() {
@@ -26,8 +24,6 @@ public class LoginPage extends Component {
 
             login_certs = Login_certs.getAuthenticated(tf_username.getText(),String.valueOf(tf_password.getPassword()));
             if(login_certs!=null){
-                    //TODO: átírányítás a főoldalra.
-
                 try{
                     javax.swing.SwingUtilities.invokeLater(new Runnable() {
                         public void run() {

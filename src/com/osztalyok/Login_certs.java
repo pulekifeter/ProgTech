@@ -1,6 +1,7 @@
 package com.osztalyok;
 
 import java.sql.*;
+import com.osztalyok.Conn;
 
 public class Login_certs {
     private int ID;
@@ -22,17 +23,15 @@ public class Login_certs {
         this.password=Password;
     }
 
-    public static Login_certs getAuthenticated(String username, String password){
-        Login_certs user = null;
-        final String DB_URL = "jdbc:mysql://localhost/konyvtar_db?";
-        final String USERNAME = "root";
-        final String PASSWORD ="";
+    static Login_certs user = null;
+   
 
+    public static Login_certs getAuthenticated(String username, String password){
         try{
-            Connection conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-            Statement stmt = conn.createStatement();
+
+            Conn conn = new Conn();
             String sql = "SELECT * FROM login_certs WHERE username=? AND password=?";
-            PreparedStatement preparedStatement = conn.prepareStatement(sql);
+            PreparedStatement preparedStatement = conn.Con().prepareStatement(sql);
             preparedStatement.setString(1, username);
             preparedStatement.setString(2, password);
 
@@ -44,7 +43,6 @@ public class Login_certs {
                 user.setPassword(resultSet.getString("password"));
 
             }
-
         }catch(Exception e){
             e.printStackTrace();
         }

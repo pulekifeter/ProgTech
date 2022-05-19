@@ -20,7 +20,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.*;
 
 public class FoOldal {
-    private static LoginPage.Keret Container1;
+
 
     public JMenuBar createMenuBar(){
         JMenuBar menuBar;
@@ -47,10 +47,10 @@ public class FoOldal {
         menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FoOldal.Container1.frame.setContentPane(new UjKonyv().ujKonyvPanel);
-                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                FoOldal.Container1.frame.pack();
-                FoOldal.Container1.frame.setVisible(true);
+                LoginPage.Keret.frame.setContentPane(new UjKonyv().ujKonyvPanel);
+                LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                LoginPage.Keret.frame.pack();
+                LoginPage.Keret.frame.setVisible(true);
             }
         });
 
@@ -65,11 +65,10 @@ public class FoOldal {
         menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FoOldal.Container1.frame.setContentPane(new KonyvModositas().konyvModositasPanel);
-                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                FoOldal.Container1.frame.pack();
-                FoOldal.Container1.frame.setVisible(true);
-            }
+                LoginPage.Keret.frame.setContentPane(new KonyvModositas().konyvModositasPanel);
+                LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                LoginPage.Keret.frame.pack();
+                LoginPage.Keret.frame.setVisible(true);           }
         });
         menu.add(menuItem);
 
@@ -82,10 +81,10 @@ public class FoOldal {
         menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FoOldal.Container1.frame.setContentPane(new KonyvKereses().konyvKeresesPanel);
-                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                FoOldal.Container1.frame.pack();
-                FoOldal.Container1.frame.setVisible(true);
+                LoginPage.Keret.frame.setContentPane(new KonyvKereses().konyvKeresesPanel);
+                LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                LoginPage.Keret.frame.pack();
+                LoginPage.Keret.frame.setVisible(true);
             }
         });
 
@@ -100,10 +99,10 @@ public class FoOldal {
         menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FoOldal.Container1.frame.setContentPane(new KonyvTorles().konyvTorlesPanel);
-                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                FoOldal.Container1.frame.pack();
-                FoOldal.Container1.frame.setVisible(true);
+                LoginPage.Keret.frame.setContentPane(new KonyvTorles().konyvTorlesPanel);
+                LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                LoginPage.Keret.frame.pack();
+                LoginPage.Keret.frame.setVisible(true);
             }
         });
         menu.add(menuItem);
@@ -124,10 +123,10 @@ public class FoOldal {
         menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FoOldal.Container1.frame.setContentPane(new TagHozzaadas().tagHozzadasPanel);
-                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                FoOldal.Container1.frame.pack();
-                FoOldal.Container1.frame.setVisible(true);
+                LoginPage.Keret.frame.setContentPane(new TagHozzaadas().tagHozzadasPanel);
+                LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                LoginPage.Keret.frame.pack();
+                LoginPage.Keret.frame.setVisible(true);
             }
         });
         menu.add(menuItem);
@@ -141,10 +140,10 @@ public class FoOldal {
         menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FoOldal.Container1.frame.setContentPane(new TagKereses().tagKeresesePanel);
-                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                FoOldal.Container1.frame.pack();
-                FoOldal.Container1.frame.setVisible(true);
+                LoginPage.Keret.frame.setContentPane(new TagKereses().tagKeresesePanel);
+                LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                LoginPage.Keret.frame.pack();
+                LoginPage.Keret.frame.setVisible(true);
             }
         });
         menu.add(menuItem);
@@ -163,10 +162,10 @@ public class FoOldal {
         menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FoOldal.Container1.frame.setContentPane(new LeltarHozzaad().leltarHozzaadPanel);
-                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                FoOldal.Container1.frame.pack();
-                FoOldal.Container1.frame.setVisible(true);
+                LoginPage.Keret.frame.setContentPane(new LeltarHozzaad().leltarHozzaadPanel);
+                LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                LoginPage.Keret.frame.pack();
+                LoginPage.Keret.frame.setVisible(true);
             }
         });
         menu.add(menuItem);
@@ -180,10 +179,10 @@ public class FoOldal {
         menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FoOldal.Container1.frame.setContentPane(new LeltarModositas().leltarModositasPanel);
-                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                FoOldal.Container1.frame.pack();
-                FoOldal.Container1.frame.setVisible(true);
+                LoginPage.Keret.frame.setContentPane(new LeltarModositas().leltarModositasPanel);
+                LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                LoginPage.Keret.frame.pack();
+                LoginPage.Keret.frame.setVisible(true);
             }
         });
         menu.add(menuItem);
@@ -197,10 +196,10 @@ public class FoOldal {
         menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FoOldal.Container1.frame.setContentPane(new LeltarTorles().leltarTorlesPanel);
-                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                FoOldal.Container1.frame.pack();
-                FoOldal.Container1.frame.setVisible(true);
+                LoginPage.Keret.frame.setContentPane(new LeltarTorles().leltarTorlesPanel);
+                LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                LoginPage.Keret.frame.pack();
+                LoginPage.Keret.frame.setVisible(true);
             }
         });
         menu.add(menuItem);
@@ -214,47 +213,47 @@ public class FoOldal {
         menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FoOldal.Container1.frame.setContentPane(new LeltarKereses().leltarKeresesPanel);
-                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                FoOldal.Container1.frame.pack();
-                FoOldal.Container1.frame.setVisible(true);
+                LoginPage.Keret.frame.setContentPane(new LeltarKereses().leltarKeresesPanel);
+                LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                LoginPage.Keret.frame.pack();
+                LoginPage.Keret.frame.setVisible(true);
             }
         });
         menu.add(menuItem);
 
         menu = new JMenu("Könyv kölcsönzése");
         menu.setMnemonic(KeyEvent.VK_N);
-        menu.addActionListener(new ActionListener() {
+        menuItem = new JMenuItem("Kölcsönzés",
+                KeyEvent.VK_T);
+        menuItem.setAccelerator(KeyStroke.getKeyStroke(
+                KeyEvent.VK_1, ActionEvent.ALT_MASK));
+        menuItem.getAccessibleContext().setAccessibleDescription(
+                "This doesn't really do anything");
+        menuItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FoOldal.Container1.frame.setContentPane(new Kolcsonzes().kolcsonzesPanel);
-                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                FoOldal.Container1.frame.pack();
-                FoOldal.Container1.frame.setVisible(true);
+                LoginPage.Keret.frame.setContentPane(new Kolcsonzes().kolcsonzesPanel);
+                LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                LoginPage.Keret.frame.pack();
+                LoginPage.Keret.frame.setVisible(true);
             }
         });
+        menu.add(menuItem);
         menuBar.add(menu);
 
         return menuBar;
     }
 
     public static Container createAndShowGUI() {
-
-        FoOldal.Container1.frame.setContentPane(new JPanel());
-        FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        //Create and set up the content pane.
+        LoginPage.Keret.frame.setContentPane(new JPanel());
+        LoginPage.Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         FoOldal demo = new FoOldal();
-        FoOldal.Container1.frame.setJMenuBar(demo.createMenuBar());
-
-        //Display the window.
-        FoOldal.Container1.frame.setSize(450, 260);
-        FoOldal.Container1.frame.setVisible(true);
+        LoginPage.Keret.frame.setJMenuBar(demo.createMenuBar());
+        LoginPage.Keret.frame.setSize(450, 260);
+        LoginPage.Keret.frame.setVisible(true);
         return null;
     }
     public static void main(String[] args) {
-        //Schedule a job for the event-dispatching thread:
-        //creating and showing this application's GUI.
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 createAndShowGUI();
