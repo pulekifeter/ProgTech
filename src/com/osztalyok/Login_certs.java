@@ -4,16 +4,8 @@ import java.sql.*;
 import com.osztalyok.Conn;
 
 public class Login_certs {
-    private int ID;
     private String username;
     private String password;
-
-    public String getUsername(){
-        return username;
-    }
-    public String getPassword(){
-        return password;
-    }
 
     public void setUsername(String Username){
         this.username=Username;
