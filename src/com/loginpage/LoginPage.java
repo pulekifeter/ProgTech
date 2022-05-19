@@ -31,6 +31,7 @@ public class LoginPage extends Component {
                 try{
                     javax.swing.SwingUtilities.invokeLater(new Runnable() {
                         public void run() {
+
                             createAndShowGUI();
                         }
                     });
@@ -52,14 +53,15 @@ public class LoginPage extends Component {
     }
 
     private Login_certs login_certs;
-
-
+    public class Keret {
+        public static JFrame frame = new JFrame(("LoginPage"));
+    }
     public static void main(String[] args) {
-        JFrame frame = new JFrame(("LoginPage"));
-        frame.setContentPane(new LoginPage().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
+
+        Keret.frame.setContentPane(new LoginPage().panel1);
+        Keret.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Keret.frame.pack();
+        Keret.frame.setVisible(true);
 
 
 

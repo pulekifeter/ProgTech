@@ -1,10 +1,17 @@
 package com.fooldal;
 
+import com.konyvallomany.UjKonyv;
+import com.loginpage.LoginPage;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import javax.swing.*;
 
 public class FoOldal {
+    private static LoginPage.Keret Container1;
+
     public JMenuBar createMenuBar(){
         JMenuBar menuBar;
         JMenu menu;
@@ -17,7 +24,6 @@ public class FoOldal {
         menu.getAccessibleContext().setAccessibleDescription(
                 "The only menu in this program that has menu items");
         //TODO: Valamit kellene írni ide, hogy a következő ablak megnyíljon.
-        menu.addActionListener();
         menuBar.add(menu);
 
 
@@ -28,7 +34,18 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-        menu.addActionListener();
+        menuItem.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //JFrame frame = new JFrame(("UjKonyv"));
+
+                FoOldal.Container1.frame.setContentPane(new UjKonyv().ujKonyvPanel);
+                FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                FoOldal.Container1.frame.pack();
+                FoOldal.Container1.frame.setVisible(true);
+            }
+        });
+
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Könyv módosítása",
@@ -45,7 +62,7 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-        menu.addActionListener();
+//        menu.addActionListener();
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Könyv törlése",
@@ -54,7 +71,7 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-        menu.addActionListener();
+ //       menu.addActionListener();
         menu.add(menuItem);
 
 
@@ -70,7 +87,7 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-        menu.addActionListener();
+//        menu.addActionListener();
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Tag keresése",
@@ -79,7 +96,7 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-        menu.addActionListener();
+ //       menu.addActionListener();
         menu.add(menuItem);
 
         menu = new JMenu("Leltár kezelése");
@@ -93,7 +110,7 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-        menu.addActionListener();
+//        menu.addActionListener();
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Leltáron lévő könyv módosítása",
@@ -102,7 +119,7 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-        menu.addActionListener();
+//        menu.addActionListener();
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Leltáron lévő könyv törlése",
@@ -111,7 +128,7 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-        menu.addActionListener();
+//        menu.addActionListener();
         menu.add(menuItem);
 
         menuItem = new JMenuItem("Leltáron lévő könyv keresése",
@@ -120,30 +137,32 @@ public class FoOldal {
                 KeyEvent.VK_1, ActionEvent.ALT_MASK));
         menuItem.getAccessibleContext().setAccessibleDescription(
                 "This doesn't really do anything");
-        menu.addActionListener();
+//        menu.addActionListener();
         menu.add(menuItem);
 
         menu = new JMenu("Könyv kölcsönzése");
         menu.setMnemonic(KeyEvent.VK_N);
         menu.getAccessibleContext().setAccessibleDescription(
                 "This menu does nothing");
-        menu.addActionListener();
+//        menu.addActionListener();
         menuBar.add(menu);
 
         return menuBar;
     }
-    public static void createAndShowGUI() {
-        //Create and set up the window.
-        JFrame frame = new JFrame("MenuLookDemo");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    public static Container createAndShowGUI() {
+
+        FoOldal.Container1.frame.setContentPane(new JPanel());
+        FoOldal.Container1.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Create and set up the content pane.
         FoOldal demo = new FoOldal();
-        frame.setJMenuBar(demo.createMenuBar());
+        FoOldal.Container1.frame.setJMenuBar(demo.createMenuBar());
 
         //Display the window.
-        frame.setSize(450, 260);
-        frame.setVisible(true);
+        FoOldal.Container1.frame.setSize(450, 260);
+        FoOldal.Container1.frame.setVisible(true);
+        return null;
     }
     public static void main(String[] args) {
         //Schedule a job for the event-dispatching thread:
