@@ -1,12 +1,14 @@
 package com.loginpage;
 
-
+import com.fooldal.*;
 import com.osztalyok.Login_certs;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+
+import static com.fooldal.FoOldal.createAndShowGUI;
 
 
 public class LoginPage extends Component {
@@ -27,12 +29,11 @@ public class LoginPage extends Component {
                     //TODO: átírányítás a főoldalra.
 
                 try{
-                    JFrame foOldal = new JFrame(("FoOldal"));
-                    foOldal.setContentPane(new LoginPage().mainPanel);
-                    foOldal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                    foOldal.pack();
-                    foOldal.setVisible(true);
-                    b_fooldal = true;
+                    javax.swing.SwingUtilities.invokeLater(new Runnable() {
+                        public void run() {
+                            createAndShowGUI();
+                        }
+                    });
 
                 }
                 catch (Exception exception){}
