@@ -7,4 +7,8 @@ public class KonyvModositas {
     private JTable table1;
     private JButton szerkesztésButton;
     private JButton mégsemButton;
+
+    public KonyvModositas(){
+        table1 = new JTable(KonyvKereses.KonyvKeresesLekerdezes(table1));
+    }
 }

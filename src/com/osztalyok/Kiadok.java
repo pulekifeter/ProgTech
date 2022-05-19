@@ -1,7 +1,5 @@
 package com.osztalyok;
 
-import javax.swing.*;
-
 public class Kiadok {
     private int KiadoID;
     private String KiadoNev;
@@ -22,10 +20,7 @@ public class Kiadok {
         KiadoNev = kiadoNev;
     }
 
-  //  public Kiadok(int kiadoID, String kiadoNev){
-   //     setKiadoID(kiadoID);
-   //     setKiadoNev(kiadoNev);
-   // }
+
 
 
 }

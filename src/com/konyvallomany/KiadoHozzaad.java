@@ -20,16 +20,12 @@ public class KiadoHozzaad {
     private JButton button3;
 
 
-    DefaultTableModel model = new DefaultTableModel();
-
     public KiadoHozzaad(){
-
         table1 = new JTable(KiadoHozzaadLekerdezes());
-
 
     }
 
-    public DefaultTableModel KiadoHozzaadLekerdezes()  {
+    private DefaultTableModel KiadoHozzaadLekerdezes()  {
         DefaultTableModel model = (DefaultTableModel) table1.getModel();
         model.addColumn("Col1");
         model.addColumn("Col2");
@@ -43,14 +39,11 @@ public class KiadoHozzaad {
                kiadok.setKiadoID(rs.getInt("KiadoID"));
                kiadok.setKiadoNev(rs.getString("KiadoNev"));
                model.addRow(new Object[]{kiadok.getKiadoID(), kiadok.getKiadoNev()});
-               System.out.println(kiadok.getKiadoID());
-
             }
 
         } catch (SQLException e) {
 
         }
-        System.out.println(model);
         return model;
     }
     }
