@@ -20,8 +20,6 @@ import java.awt.event.KeyEvent;
 import javax.swing.*;
 
 public class FoOldal {
-
-
     public JMenuBar createMenuBar(){
         JMenuBar menuBar;
         JMenu menu;
@@ -33,10 +31,7 @@ public class FoOldal {
         menu.setMnemonic(KeyEvent.VK_A);
         menu.getAccessibleContext().setAccessibleDescription(
                 "The only menu in this program that has menu items");
-        //TODO: Valamit kellene írni ide, hogy a következő ablak megnyíljon.
         menuBar.add(menu);
-
-
 
         menuItem = new JMenuItem("Könyv hozzáadása",
                 KeyEvent.VK_T);
@@ -106,7 +101,6 @@ public class FoOldal {
             }
         });
         menu.add(menuItem);
-
 
         menu = new JMenu("Tagok kezelése");
         menu.setMnemonic(KeyEvent.VK_N);

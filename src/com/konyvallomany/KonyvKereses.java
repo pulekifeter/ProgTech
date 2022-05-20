@@ -13,12 +13,9 @@ public class KonyvKereses {
     private JTextField textField1;
     private JTable table1;
 
-
     public KonyvKereses(){
         table1 = new JTable(KonyvKeresesLekerdezes(table1));
-
     }
-
     public static DefaultTableModel KonyvKeresesLekerdezes(JTable table1) {
         DefaultTableModel model = (DefaultTableModel) table1.getModel();
         model.addColumn("Col1");
@@ -51,11 +48,9 @@ public class KonyvKereses {
                         konyvek.getAr()
                 });
             }
-
-        } catch (SQLException e) {
-
         }
-
+        catch (SQLException e) {
+        }
         return model;
-
-    }}
+    }
+}

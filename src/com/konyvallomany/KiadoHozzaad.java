@@ -23,12 +23,8 @@ public class KiadoHozzaad extends Component {
         textField1.setText("");
         textField2.setText("");
     }
-
     public KiadoHozzaad(){
         table1 = new JTable(KiadoHozzaadLekerdezes());
-
-
-
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -51,15 +47,12 @@ public class KiadoHozzaad extends Component {
                     } catch (SQLException ex) {
                         throw new RuntimeException(ex);
                     }
-
-
                     try {
                         stmt.setString(1,
                                 textField2.getText());
                     } catch (SQLException ex) {
                         throw new RuntimeException(ex);
                     }
-
                     try {
                         stmt.executeUpdate();
                     } catch (SQLException ex) {
@@ -76,16 +69,10 @@ public class KiadoHozzaad extends Component {
                         }
                         table1 = new JTable(KiadoHozzaadLekerdezes());
                         KiadoDeleterows();
-
-
-
-
                     }
                 }
-
             }
         });
-
     }
 
     private DefaultTableModel KiadoHozzaadLekerdezes()  {
